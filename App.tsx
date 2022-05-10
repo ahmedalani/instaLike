@@ -11,10 +11,15 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
+import colors from './src/theme/colors';
+import font from './src/theme/fonts';
+
 const App = () => {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>app view instaLike</Text>
+      <Text style={{color: colors.primary, fontSize: font.size.xlg}}>
+        this is instaLike
+      </Text>
     </View>
   );
 };
