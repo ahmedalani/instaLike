@@ -10,6 +10,7 @@
 
 import React from 'react';
 import {Text, View} from 'react-native';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 import colors from './src/theme/colors';
 import font from './src/theme/fonts';
@@ -20,6 +21,7 @@ const App = () => {
       <Text style={{color: colors.primary, fontSize: font.size.xlg}}>
         this is instaLike
       </Text>
+      <AntDesign name="instagram" size={50} color={colors.primary} />
     </View>
   );
 };
