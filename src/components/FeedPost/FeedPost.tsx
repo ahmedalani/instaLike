@@ -10,18 +10,25 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
 import colors from '../../theme/colors';
 
-const FeedPost = () => {
+// components
+import Comment from '../Comment';
+
+import {IPost} from '../../types/models';
+interface IFeedPost {
+  post: IPost;
+}
+const FeedPost = ({post}: IFeedPost) => {
   return (
     <View style={styles.post}>
       {/* Header */}
       <View style={styles.header}>
         <Image
           source={{
-            uri: 'https://www.uptowneyecare.com/wp-content/uploads/2019/03/green-eyes.jpg',
+            uri: post.user.image,
           }}
           style={styles.userAvatar}
         />
-        <Text style={styles.userName}>JamieHots</Text>
+        <Text style={styles.userName}>{post.user.username}</Text>
         <Entypo
           name="dots-three-horizontal"
           size={16}
@@ -31,7 +38,7 @@ const FeedPost = () => {
       {/* Content */}
       <Image
         source={{
-          uri: 'https://www.uptowneyecare.com/wp-content/uploads/2019/03/green-eyes.jpg',
+          uri: post.image,
         }}
         style={styles.image}
       />
@@ -66,31 +73,22 @@ const FeedPost = () => {
         {/* Likes */}
         <Text style={styles.text}>
           Liked by <Text style={styles.bold}>someUserName</Text> and{' '}
-          <Text style={styles.bold}>66 others</Text>
+          <Text style={styles.bold}>{post.nofLikes} others</Text>
         </Text>
         {/* post description */}
         <Text style={styles.text}>
-          <Text style={styles.bold}>JamieHots</Text> this is a great post and
-          you are the most for in the future this is a greatmost for in the
-          future this is a greatmost for in the future this is a great
+          <Text style={styles.bold}>{post.user.username}</Text>{' '}
+          {post.description}
         </Text>
         {/* Comments */}
-        <Text style={{color: colors.grey}}>View all 16 comments</Text>
-        <View style={styles.comment}>
-          <Text style={styles.commentText}>
-            <Text style={styles.bold}>someUser</Text> this is a great post and
-            you are the most for in the future this is a great post and you are
-            so.
-          </Text>
-          <AntDesign
-            name={'hearto'}
-            size={16}
-            style={styles.icon}
-            color={colors.black}
-          />
-        </View>
+        <Text style={{color: colors.grey}}>
+          View all {post.nofComments} comments
+        </Text>
+        {post.comments.map(c => {
+          return <Comment key={c.id} comment={c} />;
+        })}
         {/* posted date */}
-        <Text style={{color: colors.grey}}>19 April, 2022</Text>
+        <Text style={{color: colors.grey}}>{post.createdAt}</Text>
       </View>
     </View>
   );
