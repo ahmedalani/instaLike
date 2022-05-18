@@ -1,0 +1,126 @@
+[
+  {
+    "id": "1",
+    "createdAt": "19 December 2021",
+    "image": "https://image.tmdb.org/t/p/w500/eqCjJ7a9t6JM0U8JOTHDN1yXZyT.jpg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?",
+    "user": {
+      "id": "u1",
+      "image": "https://image.tmdb.org/t/p/w500/eqCjJ7a9t6JM0U8JOTHDN1yXZyT.jpg",
+      "username": "juliaFox"
+    },
+    "nofComments": 11,
+    "nofLikes": 34,
+    "comments": [
+      {
+        "id": "1",
+        "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
+        "user": {
+          "id": "u1",
+          "username": "juliaFox"
+        }
+      },
+      {
+        "id": "2",
+        "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
+        "user": {
+          "id": "u1",
+          "username": "juliaFox"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "createdAt": "19 December 2021",
+    "image": "https://www.uptowneyecare.com/wp-content/uploads/2019/03/green-eyes.jpg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?",
+    "user": {
+      "id": "u1",
+      "image": "https://www.uptowneyecare.com/wp-content/uploads/2019/03/green-eyes.jpg",
+      "username": "jamieGreen"
+    },
+    "nofComments": 11,
+    "nofLikes": 34,
+    "comments": [
+      {
+        "id": "1",
+        "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
+        "user": {
+          "id": "u1",
+          "username": "jamieGreen"
+        }
+      },
+      {
+        "id": "2",
+        "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
+        "user": {
+          "id": "u1",
+          "username": "jamieGreen"
+        }
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "createdAt": "19 December 2021",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/3.jpg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?",
+    "user": {
+      "id": "u1",
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/3.jpg",
+      "username": "markFrank"
+    },
+    "nofComments": 11,
+    "nofLikes": 34,
+    "comments": [
+      {
+        "id": "1",
+        "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
+        "user": {
+          "id": "u1",
+          "username": "markFrank"
+        }
+      },
+      {
+        "id": "2",
+        "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
+        "user": {
+          "id": "u1",
+          "username": "markFrank"
+        }
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "createdAt": "19 December 2021",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/4.jpg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?",
+    "user": {
+      "id": "u1",
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/4.jpg",
+      "username": "kevinStar"
+    },
+    "nofComments": 11,
+    "nofLikes": 34,
+    "comments": [
+      {
+        "id": "1",
+        "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
+        "user": {
+          "id": "u1",
+          "username": "kevinStar"
+        }
+      },
+      {
+        "id": "2",
+        "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
+        "user": {
+          "id": "u1",
+          "username": "kevinStar"
+        }
+      }
+    ]
+  }
+]
