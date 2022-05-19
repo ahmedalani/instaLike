@@ -2,7 +2,11 @@
   {
     "id": "1",
     "createdAt": "19 December 2021",
-    "images": ["https://image.tmdb.org/t/p/w500/eqCjJ7a9t6JM0U8JOTHDN1yXZyT.jpg", "https://pyxis.nymag.com/v1/imgs/6aa/3e8/8270dc32e78e740efcca11b7c330bacf7f-2-julia-fox.rsocial.w1200.jpg", "https://arealnews.com/wp-content/uploads/2022/01/Julia-Fox-Biography.png"],
+    "images": [
+      "https://image.tmdb.org/t/p/w500/eqCjJ7a9t6JM0U8JOTHDN1yXZyT.jpg",
+      "https://pyxis.nymag.com/v1/imgs/6aa/3e8/8270dc32e78e740efcca11b7c330bacf7f-2-julia-fox.rsocial.w1200.jpg",
+      "https://arealnews.com/wp-content/uploads/2022/01/Julia-Fox-Biography.png"
+    ],
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?",
     "user": {
       "id": "u1",

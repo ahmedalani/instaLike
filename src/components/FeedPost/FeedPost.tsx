@@ -13,6 +13,7 @@ import colors from '../../theme/colors';
 // components
 import Comment from '../Comment';
 import DoublePressable from '../DoublePressable';
+import Carousel from '../Carousel';
 
 import {IPost} from '../../types/models';
 interface IFeedPost {
@@ -33,6 +34,25 @@ const FeedPost = ({post}: IFeedPost) => {
     setIsLiked(currV => !currV);
   };
 
+  // this logic will be refactored soon but for now it handle content (post images) if there is multiple images we render flatlist
+  // otherwise we render single Image node
+  let content = null;
+  if (post.image) {
+    content = (
+      <DoublePressable onDoublePress={toggleLike}>
+        <Image
+          source={{
+            uri: post.image,
+          }}
+          style={styles.image}
+        />
+      </DoublePressable>
+    );
+  } else if (post.images) {
+    // pass down the toggleLike function to be handled through the flatlist otherwise the flatlist won't scroll because the doublePressable
+    // componenet will handle touch before flatlist
+    content = <Carousel images={post.images} onDoublePress={toggleLike} />;
+  }
   return (
     <View style={styles.post}>
       {/* Header */}
@@ -47,15 +67,7 @@ const FeedPost = ({post}: IFeedPost) => {
         <Entypo name="dots-three-horizontal" size={16} style={styles.threeDots} />
       </View>
       {/* Content */}
-      {/* doublePressable is custom componenet to handle double touch a picture and toggle the like function */}
-      <DoublePressable onDoublePress={toggleLike}>
-        <Image
-          source={{
-            uri: post.image,
-          }}
-          style={styles.image}
-        />
-      </DoublePressable>
+      {content}
       {/* Footer */}
       <View style={styles.footer}>
         <View style={styles.iconContainer}>
