@@ -14,6 +14,7 @@ import colors from '../../theme/colors';
 import Comment from '../Comment';
 import DoublePressable from '../DoublePressable';
 import Carousel from '../Carousel';
+import VideoPlayer from '../VideoPlayer';
 
 import {IPost} from '../../types/models';
 interface IFeedPost {
@@ -52,6 +53,12 @@ const FeedPost = ({post}: IFeedPost) => {
     // pass down the toggleLike function to be handled through the flatlist otherwise the flatlist won't scroll because the doublePressable
     // componenet will handle touch before flatlist
     content = <Carousel images={post.images} onDoublePress={toggleLike} />;
+  } else if (post.video) {
+    content = (
+      <DoublePressable onDoublePress={toggleLike}>
+        <VideoPlayer uri={post.video} />
+      </DoublePressable>
+    );
   }
   return (
     <View style={styles.post}>
