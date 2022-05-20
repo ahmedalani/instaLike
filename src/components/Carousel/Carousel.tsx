@@ -32,6 +32,7 @@ const Carousel = ({images, onDoublePress = () => {}}: ICarousel) => {
           </DoublePressable>
         )}
         horizontal
+        showsHorizontalScrollIndicator={false}
         pagingEnabled
         // to highlight selected/viewed image dot
         onViewableItemsChanged={onViewableItemsChanged.current}

@@ -19,8 +19,9 @@ import VideoPlayer from '../VideoPlayer';
 import {IPost} from '../../types/models';
 interface IFeedPost {
   post: IPost;
+  isVisible: boolean;
 }
-const FeedPost = ({post}: IFeedPost) => {
+const FeedPost = ({post, isVisible}: IFeedPost) => {
   // states:
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState<Boolean>(false);
   const [isLiked, setIsLiked] = useState<Boolean>(false);
@@ -56,7 +57,7 @@ const FeedPost = ({post}: IFeedPost) => {
   } else if (post.video) {
     content = (
       <DoublePressable onDoublePress={toggleLike}>
-        <VideoPlayer uri={post.video} />
+        <VideoPlayer uri={post.video} paused={!isVisible} />
       </DoublePressable>
     );
   }

@@ -7,12 +7,13 @@ import colors from '../../theme/colors';
 
 interface IVideoPlayer {
   uri: string;
+  paused: boolean;
 }
-const VideoPlayer = ({uri}: IVideoPlayer) => {
+const VideoPlayer = ({uri, paused}: IVideoPlayer) => {
   const [muted, setMuted] = useState(true);
   return (
     <View>
-      <Video source={{uri}} style={styles.video} resizeMode="cover" repeat={true} muted={muted} />
+      <Video source={{uri}} style={styles.video} resizeMode="cover" repeat={true} muted={muted} paused={paused} />
       <Pressable onPress={() => setMuted(currV => !currV)} style={styles.muteButton}>
         <Ionicons name={muted ? 'volume-mute' : 'volume-medium'} size={14} color={colors.white} />
       </Pressable>
