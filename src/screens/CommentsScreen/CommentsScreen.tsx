@@ -8,7 +8,7 @@ import Comment from '../../components/Comment';
 const CommentsScreen = () => {
   return (
     <View>
-      <FlatList data={comments} renderItem={({item}) => <Comment comment={item} />} />
+      <FlatList data={comments} renderItem={({item}) => <Comment comment={item} includeDetails />} style={{padding: 10}} />
     </View>
   );
 };
