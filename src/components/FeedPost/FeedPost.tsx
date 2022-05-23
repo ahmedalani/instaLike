@@ -19,7 +19,7 @@ import VideoPlayer from '../VideoPlayer';
 import {IPost} from '../../types/models';
 interface IFeedPost {
   post: IPost;
-  isVisible: boolean;
+  isVisible?: boolean;
 }
 const FeedPost = ({post, isVisible}: IFeedPost) => {
   // states:
