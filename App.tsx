@@ -12,16 +12,18 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 
 // screens
-import HomeScreen from './src/screens/HomeScreen';
-import CommentsScreen from './src/screens/CommentsScreen';
-import ProfileScreen from './src/screens/ProfileScreen';
+// import HomeScreen from './src/screens/HomeScreen';
+// import CommentsScreen from './src/screens/CommentsScreen';
+// import ProfileScreen from './src/screens/ProfileScreen';
+import EditProfileScreen from './src/screens/EditProfileScreen';
 
 const App = () => {
   return (
     <View style={styles.app}>
       {/* <HomeScreen /> */}
       {/* <CommentsScreen /> */}
-      <ProfileScreen />
+      {/* <ProfileScreen /> */}
+      <EditProfileScreen />
     </View>
   );
 };
