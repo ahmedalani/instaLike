@@ -1,36 +1,51 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image, TextInput} from 'react-native';
+import {useForm, Controller, Control} from 'react-hook-form';
 // dummy data
 import user from '../../assets/data/user.json';
 import colors from '../../theme/colors';
 import fonts from '../../theme/fonts';
 
+import {IUser} from '../../types/models';
+
+type IEditableUserField = 'name' | 'username' | 'website' | 'bio';
+type IEditableUser = Pick<IUser, IEditableUserField>;
 interface ICustomInput {
   label: string;
+  name: IEditableUserField;
+  control: Control<IEditableUser, object>;
   multiline?: boolean;
 }
-const CustomInput = ({label, multiline = false}: ICustomInput) => (
-  <View style={styles.inputContainer}>
-    <Text style={styles.label}>{label}</Text>
-    <TextInput placeholder="Hello" style={styles.input} multiline={multiline} />
-  </View>
+const CustomInput = ({label, multiline = false, control, name}: ICustomInput) => (
+  <Controller
+    control={control}
+    name={name}
+    render={({field: {onChange, value, onBlur}}) => (
+      <View style={styles.inputContainer}>
+        <Text style={styles.label}>{label}</Text>
+        <TextInput placeholder="Hello" style={styles.input} multiline={multiline} value={value} onChangeText={onChange} onBlur={onBlur} />
+      </View>
+    )}
+  />
 );
 
 const EditProfileScreen = () => {
-  const onSubmit = () => {
-    console.log('submit!');
+  const {control, handleSubmit} = useForm<IEditableUser>();
+
+  const onSubmit = (data: IEditableUser) => {
+    console.log('submit!', data);
   };
   return (
     <View style={styles.page}>
       <Image source={{uri: user.image}} style={styles.avatar} />
       <Text style={styles.textButton}>Change profile photo</Text>
+      {/* form */}
+      <CustomInput label="Name" name="name" control={control} />
+      <CustomInput label="Username" name="username" control={control} />
+      <CustomInput label="Website" name="website" control={control} />
+      <CustomInput label="Bio" name="bio" control={control} multiline />
 
-      <CustomInput label="Name" />
-      <CustomInput label="username" />
-      <CustomInput label="Website" />
-      <CustomInput label="Bio" multiline />
-
-      <Text style={styles.textButton} onPress={onSubmit}>
+      <Text style={styles.textButton} onPress={handleSubmit(onSubmit)}>
         Submit
       </Text>
     </View>
