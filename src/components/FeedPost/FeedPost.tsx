@@ -67,11 +67,11 @@ const FeedPost = ({post, isVisible}: IFeedPost) => {
       <View style={styles.header}>
         <Image
           source={{
-            uri: post.user.image,
+            uri: post.user?.image,
           }}
           style={styles.userAvatar}
         />
-        <Text style={styles.userName}>{post.user.username}</Text>
+        <Text style={styles.userName}>{post.user?.username}</Text>
         <Entypo name="dots-three-horizontal" size={16} style={styles.threeDots} />
       </View>
       {/* Content */}
@@ -92,11 +92,11 @@ const FeedPost = ({post, isVisible}: IFeedPost) => {
         </Text>
         {/* post description */}
         <Text style={styles.text} onPress={toggleDescriptionExpanded} numberOfLines={isDescriptionExpanded ? 0 : 2}>
-          <Text style={styles.bold}>{post.user.username}</Text> {post.description}
+          <Text style={styles.bold}>{post.user?.username}</Text> {post.description}
         </Text>
         {/* Comments */}
         <Text style={{color: colors.grey}}>View all {post.nofComments} comments</Text>
-        {post.comments.map(c => {
+        {post.comments?.map(c => {
           return <Comment key={c.id} comment={c} />;
         })}
         {/* posted date */}
