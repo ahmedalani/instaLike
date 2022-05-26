@@ -15,7 +15,8 @@ import {StyleSheet, View} from 'react-native';
 // import HomeScreen from './src/screens/HomeScreen';
 // import CommentsScreen from './src/screens/CommentsScreen';
 // import ProfileScreen from './src/screens/ProfileScreen';
-import EditProfileScreen from './src/screens/EditProfileScreen';
+// import EditProfileScreen from './src/screens/EditProfileScreen';
+import PostUploadScreen from './src/screens/PostUploadScreen';
 
 const App = () => {
   return (
@@ -23,7 +24,8 @@ const App = () => {
       {/* <HomeScreen /> */}
       {/* <CommentsScreen /> */}
       {/* <ProfileScreen /> */}
-      <EditProfileScreen />
+      {/* <EditProfileScreen /> */}
+      <PostUploadScreen />
     </View>
   );
 };
@@ -31,7 +33,8 @@ const App = () => {
 const styles = StyleSheet.create({
   app: {
     flex: 1,
-    marginTop: 30,
+    marginTop: 35,
+    // marginBottom: 10,
   },
 });
 

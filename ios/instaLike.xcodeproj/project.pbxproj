@@ -14,6 +14,8 @@
 		17D0FFF9C2C088C5899D6733 /* libPods-instaLike.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF82C54C7ADDA9E06EE80012 /* libPods-instaLike.a */; };
 		5A33A8226A4DEA4FEFD2A514 /* libPods-instaLike-instaLikeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CADDAB88835A464444E648A5 /* libPods-instaLike-instaLikeTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		C17B77C04AC558E2E22B2E1D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CC19199A63D98978C84279 /* ExpoModulesProvider.swift */; };
+		C52EF1FE92055E4BAAAD0BA4 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E46806C2F07E7B0A4F4EFD /* ExpoModulesProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +58,9 @@
 		2FBDF6F34AF2B856C05CF948 /* Pods-instaLike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaLike.release.xcconfig"; path = "Target Support Files/Pods-instaLike/Pods-instaLike.release.xcconfig"; sourceTree = "<group>"; };
 		4C9B9E850E032DA84093B4CD /* Pods-instaLike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaLike.debug.xcconfig"; path = "Target Support Files/Pods-instaLike/Pods-instaLike.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = instaLike/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		82E46806C2F07E7B0A4F4EFD /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-instaLike/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		86AF739464382F9AC1850E13 /* Pods-instaLike-instaLikeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaLike-instaLikeTests.debug.xcconfig"; path = "Target Support Files/Pods-instaLike-instaLikeTests/Pods-instaLike-instaLikeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A3CC19199A63D98978C84279 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-instaLike-instaLikeTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		CADDAB88835A464444E648A5 /* libPods-instaLike-instaLikeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-instaLike-instaLikeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF82C54C7ADDA9E06EE80012 /* libPods-instaLike.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-instaLike.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -146,6 +150,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3D3F5689691A57B6F8474D2D /* instaLikeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A3CC19199A63D98978C84279 /* ExpoModulesProvider.swift */,
+			);
+			name = instaLikeTests;
+			sourceTree = "<group>";
+		};
+		540128F1AAFE581F2F0B6549 /* ExpoModulesProviders */ = {
+			isa = PBXGroup;
+			children = (
+				E124F5A81DE10ABBCCAD3563 /* instaLike */,
+				3D3F5689691A57B6F8474D2D /* instaLikeTests */,
+			);
+			name = ExpoModulesProviders;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +183,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				540128F1AAFE581F2F0B6549 /* ExpoModulesProviders */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -186,6 +208,14 @@
 				19ADB668EFF74585028F1FB8 /* Pods-instaLike-instaLikeTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E124F5A81DE10ABBCCAD3563 /* instaLike */ = {
+			isa = PBXGroup;
+			children = (
+				82E46806C2F07E7B0A4F4EFD /* ExpoModulesProvider.swift */,
+			);
+			name = instaLike;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E356F31AD99517003FC87E /* instaLikeTests.m in Sources */,
+				C17B77C04AC558E2E22B2E1D /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +483,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				C52EF1FE92055E4BAAAD0BA4 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +508,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = instaLikeTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -487,6 +519,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/instaLike.app/instaLike";
@@ -500,7 +533,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = instaLikeTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -511,6 +544,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/instaLike.app/instaLike";
@@ -535,6 +569,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = instaLike;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -560,6 +595,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = instaLike;
 				SWIFT_VERSION = 5.0;
@@ -616,7 +652,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -680,7 +716,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
