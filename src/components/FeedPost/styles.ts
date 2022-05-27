@@ -3,7 +3,9 @@ import colors from '../../theme/colors';
 import fonts from '../../theme/fonts';
 
 export default StyleSheet.create({
-  post: {},
+  post: {
+    marginBottom: 10,
+  },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
