@@ -18,7 +18,6 @@ const HomeScreen = () => {
 
   return (
     <FlatList
-      style={{marginTop: 35}}
       data={posts}
       renderItem={({item}) => <FeedPost post={item} isVisible={activePostId === item.id} />}
       showsVerticalScrollIndicator={false}
