@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Text, View, Image, Pressable} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 // vector icons
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -26,6 +27,11 @@ const FeedPost = ({post, isVisible}: IFeedPost) => {
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState<Boolean>(false);
   const [isLiked, setIsLiked] = useState<Boolean>(false);
 
+  const navigation = useNavigation();
+  const navigateToUser = () => {
+    console.log('feedPost: ', post.user);
+    navigation.navigate('UserProfile', {userId: post?.user?.id});
+  };
   // helper Functions:
   // expand or contrast the post description
   const toggleDescriptionExpanded = () => {
@@ -71,7 +77,9 @@ const FeedPost = ({post, isVisible}: IFeedPost) => {
           }}
           style={styles.userAvatar}
         />
-        <Text style={styles.userName}>{post.user?.username}</Text>
+        <Text onPress={navigateToUser} style={styles.userName}>
+          {post.user?.username}
+        </Text>
         <Entypo name="dots-three-horizontal" size={16} style={styles.threeDots} />
       </View>
       {/* Content */}
