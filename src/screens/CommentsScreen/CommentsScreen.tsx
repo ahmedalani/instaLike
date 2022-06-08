@@ -8,7 +8,7 @@ import Input from './Input';
 
 const CommentsScreen = () => {
   return (
-    <View style={{flex: 1, marginVertical: 5}}>
+    <View style={{flex: 1, marginVertical: 15}}>
       <FlatList data={comments} renderItem={({item}) => <Comment comment={item} includeDetails />} style={{padding: 10}} />
       <Input />
     </View>

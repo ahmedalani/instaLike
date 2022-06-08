@@ -42,6 +42,11 @@ const FeedPost = ({post, isVisible}: IFeedPost) => {
     setIsLiked(currV => !currV);
   };
 
+  // navigation function to navigate to post comments
+  const navigateToComments = () => {
+    navigation.navigate("Comments", {postId: post.id});
+  };
+
   // this logic will be refactored soon but for now it handle content (post images) if there is multiple images we render flatlist
   // otherwise we render single Image node
   let content = null;
@@ -103,7 +108,7 @@ const FeedPost = ({post, isVisible}: IFeedPost) => {
           <Text style={styles.bold}>{post.user?.username}</Text> {post.description}
         </Text>
         {/* Comments */}
-        <Text style={{color: colors.grey}}>View all {post.nofComments} comments</Text>
+        <Text onPress={navigateToComments} style={{color: colors.grey}}>View all {post.nofComments} comments</Text>
         {post.comments?.map(c => {
           return <Comment key={c.id} comment={c} />;
         })}
