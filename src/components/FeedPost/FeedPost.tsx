@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Text, View, Image, Pressable} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import {FeedNavigationProp} from '../../navigation/types';
 
 // vector icons
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -27,10 +28,15 @@ const FeedPost = ({post, isVisible}: IFeedPost) => {
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState<Boolean>(false);
   const [isLiked, setIsLiked] = useState<Boolean>(false);
 
-  const navigation = useNavigation();
+  const navigation = useNavigation<FeedNavigationProp>();
+
+  // navigation function: check for userId then navigate to user profile
   const navigateToUser = () => {
-    console.log('feedPost: ', post.user);
-    navigation.navigate('UserProfile', {userId: post?.user?.id});
+    if (!post.user) {
+      console.log('FeedPost: userId is undefined: ', post.user);
+      return;
+    }
+    navigation.navigate('UserProfile', {userId: post.user.id});
   };
   // helper Functions:
   // expand or contrast the post description
@@ -44,7 +50,7 @@ const FeedPost = ({post, isVisible}: IFeedPost) => {
 
   // navigation function to navigate to post comments
   const navigateToComments = () => {
-    navigation.navigate("Comments", {postId: post.id});
+    navigation.navigate('Comments', {postId: post.id});
   };
 
   // this logic will be refactored soon but for now it handle content (post images) if there is multiple images we render flatlist
@@ -108,7 +114,9 @@ const FeedPost = ({post, isVisible}: IFeedPost) => {
           <Text style={styles.bold}>{post.user?.username}</Text> {post.description}
         </Text>
         {/* Comments */}
-        <Text onPress={navigateToComments} style={{color: colors.grey}}>View all {post.nofComments} comments</Text>
+        <Text onPress={navigateToComments} style={{color: colors.grey}}>
+          View all {post.nofComments} comments
+        </Text>
         {post.comments?.map(c => {
           return <Comment key={c.id} comment={c} />;
         })}

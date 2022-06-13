@@ -1,11 +1,12 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {HomeStackNavigatorParamList} from './types';
 
 import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<HomeStackNavigatorParamList>();
 
 const HomeStackNavigator = () => {
   return (
