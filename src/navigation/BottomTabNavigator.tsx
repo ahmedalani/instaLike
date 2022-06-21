@@ -3,15 +3,17 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import {BottomTabNavigatorParamList} from './types';
 
 import colors from '../theme/colors';
-
+// screens
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import PostUploadScreen from '../screens/PostUploadScreen';
+// navigation stacks
 import HomeStackNavigator from './HomeStackNavigator';
 import ProfileStackNavigator from './ProfileStackNavigator';
-
+import SearchTabNavigator from './SearchTopNavigator';
+// types
+import {BottomTabNavigatorParamList} from './types';
 const Tab = createBottomTabNavigator<BottomTabNavigatorParamList>();
 
 const BottomTabNavigator = () => {
@@ -24,8 +26,8 @@ const BottomTabNavigator = () => {
       />
       <Tab.Screen
         name="Search"
-        component={HomeScreen}
-        options={{tabBarIcon: ({color, size}) => <MaterialIcons name="search" size={size} color={color} />}}
+        component={SearchTabNavigator}
+        options={{headerShown: false, tabBarIcon: ({color, size}) => <MaterialIcons name="search" size={size} color={color} />}}
       />
       <Tab.Screen
         name="Upload"

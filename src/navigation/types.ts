@@ -8,6 +8,11 @@ export type RootNavigatorParamList = {
   Comments: {postId: string};
 };
 
+// Search tabBar typs
+export type SearchTabNavigatorParamList = {
+  Users: undefined;
+  Posts: undefined;
+};
 // BottomTab typs
 export type BottomTabNavigatorParamList = {
   HomeStack: undefined;
@@ -25,8 +30,11 @@ export type HomeStackNavigatorParamList = {
   UserProfile: {userId: string};
   Comments: RootNavigatorParamList['Comments'];
 };
+// stack prop
 export type FeedNavigationProp = NativeStackNavigationProp<HomeStackNavigatorParamList, 'Feed'>;
 export type UserProfileNavigationProp = NativeStackNavigationProp<HomeStackNavigatorParamList, 'UserProfile'>;
+export type UserSearchNavigationProp = NativeStackNavigationProp<HomeStackNavigatorParamList, 'UserProfile'>;
+// route prop
 export type UserProfileRouteProp = RouteProp<HomeStackNavigatorParamList, 'UserProfile'>;
 
 // profile stack types

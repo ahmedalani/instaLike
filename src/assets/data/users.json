@@ -1,0 +1,26 @@
+[
+  {
+    "id": "u1",
+    "image": "https://image.tmdb.org/t/p/w500/eqCjJ7a9t6JM0U8JOTHDN1yXZyT.jpg",
+    "username": "juliafox",
+    "name": "Julia Fox"
+  },
+  {
+    "id": "u2",
+    "image": "https://www.uptowneyecare.com/wp-content/uploads/2019/03/green-eyes.jpg",
+    "username": "jamieGreen",
+    "name": "Jamie Green"
+  },
+  {
+    "id": "u3",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/3.jpg",
+    "username": "markFrank",
+    "name": "Mark Frank"
+  },
+  {
+    "id": "u4",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/4.jpg",
+    "username": "kevinStar",
+    "name": "kevin Star"
+  }
+]

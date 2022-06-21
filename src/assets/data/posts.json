@@ -71,7 +71,7 @@
     "image": "https://www.uptowneyecare.com/wp-content/uploads/2019/03/green-eyes.jpg",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?",
     "user": {
-      "id": "u1",
+      "id": "u2",
       "image": "https://www.uptowneyecare.com/wp-content/uploads/2019/03/green-eyes.jpg",
       "username": "jamieGreen"
     },
@@ -82,7 +82,7 @@
         "id": "1",
         "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
         "user": {
-          "id": "u1",
+          "id": "u2",
           "username": "jamieGreen"
         }
       },
@@ -90,7 +90,7 @@
         "id": "2",
         "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
         "user": {
-          "id": "u1",
+          "id": "u2",
           "username": "jamieGreen"
         }
       }
@@ -102,7 +102,7 @@
     "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/3.jpg",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?",
     "user": {
-      "id": "u1",
+      "id": "u3",
       "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/3.jpg",
       "username": "markFrank"
     },
@@ -113,7 +113,7 @@
         "id": "1",
         "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
         "user": {
-          "id": "u1",
+          "id": "u3",
           "username": "markFrank"
         }
       },
@@ -121,7 +121,7 @@
         "id": "2",
         "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
         "user": {
-          "id": "u1",
+          "id": "u3",
           "username": "markFrank"
         }
       }
@@ -133,7 +133,7 @@
     "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/4.jpg",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?",
     "user": {
-      "id": "u1",
+      "id": "u4",
       "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/4.jpg",
       "username": "kevinStar"
     },
@@ -144,7 +144,7 @@
         "id": "1",
         "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
         "user": {
-          "id": "u1",
+          "id": "u4",
           "username": "kevinStar"
         }
       },
@@ -152,7 +152,7 @@
         "id": "2",
         "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
         "user": {
-          "id": "u1",
+          "id": "u4",
           "username": "kevinStar"
         }
       }
